@@ -3,7 +3,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import ListData from '../../utils/fake-data';
 import {ListItem} from './components/list-item';
 import {FlatList, ListRenderItem} from 'react-native';
-import {useCallback} from 'react';
+import {memo, useCallback} from 'react';
+import isEqual from 'react-fast-compare';
 
 //
 //
@@ -42,4 +43,4 @@ const ListScreen = () => {
   );
 };
 
-export default ListScreen;
+export default memo(ListScreen, isEqual);

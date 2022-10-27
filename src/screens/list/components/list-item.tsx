@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import styled from '@emotion/native';
@@ -8,13 +8,14 @@ import {RootStackParamList} from '../../../stack';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {IListItem} from '../list-screen';
 import {Avatar} from '../../../components/avatar';
+import isEqual from 'react-fast-compare';
 
 //
 //
 
 const thumbnailSize = 600;
 
-export const ListItem: React.FC<{item: IListItem}> = ({item}) => {
+export const ListItem: React.FC<{item: IListItem}> = memo(({item}) => {
   const nav =
     useNavigation<
       NativeStackNavigationProp<RootStackParamList, 'ListScreen'>
@@ -49,7 +50,7 @@ export const ListItem: React.FC<{item: IListItem}> = ({item}) => {
       </View>
     </ListItemContainer>
   );
-};
+}, isEqual);
 
 //
 //
