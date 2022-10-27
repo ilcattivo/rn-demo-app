@@ -1,4 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {D} from '@mobily/ts-belt';
 
 import ListScreen, {IListItem} from './screens/list';
 import {Item} from './item';
@@ -24,7 +25,12 @@ const Stack = () => {
         headerBackTitle: '',
         headerTitleStyle: {
           fontSize: 16,
-          ...(ThemeFont.medium as any),
+          ...D.selectKeys(ThemeFont.medium, [
+            'fontFamily',
+            'fontSize',
+            'fontWeight',
+          ]),
+          color: ThemeFont.medium.color as string,
         },
         contentStyle: {
           backgroundColor: '#eee',

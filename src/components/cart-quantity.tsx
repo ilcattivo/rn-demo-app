@@ -6,10 +6,12 @@ import {Typography} from './typography';
 //
 //
 
-export const CartQuantity: React.FC<{
-  quantity: any;
+export interface ICartQuantity {
+  quantity: number;
   update: Dispatch<SetStateAction<number>>;
-}> = ({quantity, update}) => {
+}
+
+export const CartQuantity: React.FC<ICartQuantity> = ({quantity, update}) => {
   return (
     <QuantityContainer>
       <React.Fragment>

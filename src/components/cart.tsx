@@ -2,14 +2,16 @@ import styled from '@emotion/native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {Container} from './container';
-import {CartQuantity} from './cart-quantity';
+import {CartQuantity, ICartQuantity} from './cart-quantity';
 import {Typography} from './typography';
 import {Alert} from 'react-native';
 
 //
 //
 
-export const Cart: React.FC<any> = ({quantity, update}) => {
+interface ICart extends ICartQuantity {}
+
+export const Cart: React.FC<ICart> = ({quantity, update}) => {
   const insets = useSafeAreaInsets();
 
   return (

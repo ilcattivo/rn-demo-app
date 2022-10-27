@@ -12,7 +12,7 @@ export interface IListItem {
   name: string;
   description: string;
   price: string;
-  salePrice: any;
+  salePrice: string | undefined;
   brand: string;
 }
 
