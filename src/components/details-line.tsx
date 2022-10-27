@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import styled from '@emotion/native';
 
 import {Typography} from './typography';
@@ -8,7 +8,7 @@ import {Typography} from './typography';
 
 export const DetailsLine: React.FC<{
   label?: React.ReactNode;
-  children: string;
+  children: ReactNode;
 }> = ({label, children}) => {
   return (
     <DetailsLineContainer>
