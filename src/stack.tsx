@@ -29,8 +29,8 @@ const Stack = () => {
             'fontFamily',
             'fontSize',
             'fontWeight',
+            'color',
           ]),
-          color: ThemeFont.medium.color as string,
         },
         contentStyle: {
           backgroundColor: '#eee',

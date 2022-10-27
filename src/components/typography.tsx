@@ -17,7 +17,10 @@ export const Typography = styled.Text<{
   ...ThemeFont[weight],
 }));
 
-export const ThemeFont: Record<string, TextStyle> = {
+export const ThemeFont: Record<
+  string,
+  TextStyle & {color?: string | undefined}
+> = {
   light: {
     fontFamily: 'IBMPlexSansArabic-Light',
     fontWeight: isIos ? '300' : undefined,
