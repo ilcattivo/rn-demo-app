@@ -62,7 +62,7 @@ export const ItemScreen = () => {
             <Typography fontSize={18} color="red">
               <ItemDiscountedPrice>SAR {params.price}</ItemDiscountedPrice>
               {'  '}
-              SAR {params.price}
+              SAR {params.salePrice}
             </Typography>
           ) : (
             <Typography fontSize={18}>SAR {params.price}</Typography>
