@@ -1,7 +1,7 @@
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import ListData from '../../utils/fake-data';
-import {ListItem} from './components/item';
+import {ListItem} from './components/list-item';
 import {FlatList, ListRenderItem} from 'react-native';
 import {useCallback} from 'react';
 

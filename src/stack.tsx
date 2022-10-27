@@ -1,8 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {D} from '@mobily/ts-belt';
 
-import ListScreen, {IListItem} from './screens/list';
-import {Item} from './item';
+import ListScreen, {IListItem} from './screens/list/list-screen';
+import {ItemScreen} from './screens/item/item-screen';
 
 import {ThemeFont} from './components/typography';
 
@@ -43,7 +43,7 @@ const Stack = () => {
       />
       <RootStack.Screen
         name="ItemScreen"
-        component={Item}
+        component={ItemScreen}
         options={{title: 'Item'}}
       />
     </RootStack.Navigator>
