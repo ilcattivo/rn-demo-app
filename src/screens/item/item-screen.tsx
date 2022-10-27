@@ -83,6 +83,7 @@ export const ItemScreen = () => {
           <Typography weight="medium">Specifications</Typography>
           <DetailsLine label="Type">{SPEC_3}</DetailsLine>
           <DetailsLine label="Weight">{SPEC_4} kg</DetailsLine>
+          {/* TODO: display model and battery */}
         </Container>
       </ScrollView>
 
