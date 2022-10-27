@@ -32,7 +32,7 @@ const ListScreen = () => {
   );
 
   return (
-    <SafeAreaView edges={['top', 'bottom']}>
+    <SafeAreaView edges={['bottom']}>
       <FlatList
         data={ListData}
         renderItem={renderItem}
