@@ -82,9 +82,7 @@ export const Item = () => {
           <Typography weight="medium" />
           <Typography weight="medium">Specifications</Typography>
           <DetailsLine label="Type">{SPEC_3}</DetailsLine>
-          <DetailsLine label="Weight">
-            {SPEC_4} kg
-          </DetailsLine>
+          <DetailsLine label="Weight">{SPEC_4} kg</DetailsLine>
         </Container>
       </ScrollView>
 
