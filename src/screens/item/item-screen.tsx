@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Dimensions, ScrollView} from 'react-native';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
@@ -32,16 +32,17 @@ export const ItemScreen = () => {
 
   const [quantity, setQuantity] = useState<number>(5);
 
+  useEffect(() => {
+    if (params) {
+      nav.setOptions({
+        title: params.name,
+      });
+    }
+  }, [nav, params]);
+
   if (!params) {
     return <Typography>Loading ...</Typography>;
   }
-
-  nav.setOptions({
-    title: params.name,
-  });
-
-  //
-  //
 
   return (
     <React.Fragment>
