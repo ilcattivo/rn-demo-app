@@ -45,7 +45,7 @@ export const ItemScreen = () => {
 
   return (
     <React.Fragment>
-      <ScrollView>
+      <ScrollView contentContainerStyle={{paddingBottom: 44}}>
         <Container>
           <ItemImage
             source={{uri: getImage(900, params.id)}}
