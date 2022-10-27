@@ -20,6 +20,8 @@ export const ListItem: React.FC<{item: IListItem}> = ({item}) => {
       NativeStackNavigationProp<RootStackParamList, 'ListScreen'>
     >();
 
+  const hasDiscount = item.salePrice && item.salePrice < item.price;
+
   return (
     <ListItemContainer onPress={() => nav.navigate('ItemScreen', item)}>
       <Avatar
@@ -29,20 +31,17 @@ export const ListItem: React.FC<{item: IListItem}> = ({item}) => {
 
       <View style={styles.flex}>
         <Typography weight="medium">{item.name}</Typography>
-        {!item.salePrice ? (
-          <Typography style={item.salePrice ? styles.discounted : undefined}>
-            SAR {item.price}
-          </Typography>
-        ) : null}
-
-        {item.salePrice ? (
-          <Typography color="#DA2121">
+        <Typography>
+          {hasDiscount ? (
             <Typography style={item.salePrice ? styles.discounted : undefined}>
               SAR {item.price}
             </Typography>
-            {'  '}SAR {item.salePrice}
+          ) : null}
+          {hasDiscount ? '  ' : null}
+          <Typography color={hasDiscount ? '#DA2121' : '#000000'}>
+            SAR {item.salePrice || item.price}
           </Typography>
-        ) : null}
+        </Typography>
 
         <Typography fontSize={14} color="#545454">
           Brand: {item.name}
