@@ -16,7 +16,7 @@ export const CartQuantity: React.FC<ICartQuantity> = ({quantity, update}) => {
     <QuantityContainer>
       <React.Fragment>
         <QuantityButton
-          onPress={() => update(quantity + 1)}
+          onPress={() => update(prev => prev + 1)}
           underlayColor="#EDEBF2">
           <Typography color="#522973">+</Typography>
         </QuantityButton>
@@ -26,7 +26,7 @@ export const CartQuantity: React.FC<ICartQuantity> = ({quantity, update}) => {
         </Typography>
 
         <QuantityButton
-          onPress={() => update(quantity + 1)}
+          onPress={() => update(prev => (prev > 1 ? prev - 1 : prev))}
           underlayColor="#EDEBF2">
           <Typography color="#522973">-</Typography>
         </QuantityButton>
