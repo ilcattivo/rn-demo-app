@@ -1,9 +1,10 @@
 import styled from '@emotion/native';
+import {Image} from './image';
 
 //
 //
 
-export const Avatar = styled.Image({
+export const Avatar = styled(Image)({
   width: 56,
   height: 56,
   borderTopLeftRadius: 26,

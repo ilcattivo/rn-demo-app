@@ -12,6 +12,7 @@ import {Typography} from '../../components/typography';
 import {DetailsLine} from '../../components/details-line';
 import {DetailsTitle} from '../../components/details-title';
 import {Cart} from '../../components/cart';
+import {Image} from '../../components/image';
 
 //
 //
@@ -96,7 +97,7 @@ export const ItemScreen = () => {
 //
 //
 
-const ItemImage = styled.Image<{size: number}>(props => ({
+const ItemImage = styled(Image)<{size: number}>(props => ({
   width: props.size,
   height: props.size,
   marginVertical: 16,

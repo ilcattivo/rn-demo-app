@@ -12,6 +12,18 @@ module.exports = {
         'no-undef': 'off',
         'react/react-in-jsx-scope': 'off',
         '@typescript-eslint/no-explicit-any': ['error'],
+        'no-restricted-imports': [
+          'error',
+          {
+            paths: [
+              {
+                importNames: ['Image'],
+                name: 'react-native',
+                message: 'Please use components/Image instead',
+              },
+            ],
+          },
+        ],
       },
     },
   ],
