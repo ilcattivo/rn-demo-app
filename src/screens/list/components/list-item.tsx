@@ -13,7 +13,7 @@ import isEqual from 'react-fast-compare';
 //
 //
 
-const thumbnailSize = 600;
+const thumbnailSize = 56;
 
 export const ListItem: React.FC<{item: IListItem}> = memo(({item}) => {
   const nav =
