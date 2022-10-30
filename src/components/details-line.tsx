@@ -12,7 +12,11 @@ export const DetailsLine: React.FC<{
 }> = ({label, children}) => {
   return (
     <DetailsLineContainer>
-      <Typography fontSize={14} style={{marginRight: 16}} weight="medium">
+      <Typography
+        fontSize={14}
+        style={{marginRight: 16}}
+        weight="medium"
+        color="#545454">
         {label}
       </Typography>
 

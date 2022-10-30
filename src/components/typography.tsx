@@ -9,8 +9,9 @@ const isIos = Platform.OS === 'ios';
 export const Typography = styled.Text<{
   weight?: keyof typeof ThemeFont;
   fontSize?: TextStyle['fontSize'];
+  // TODO: add color constants to theme
   color?: TextStyle['color'];
-}>(({fontSize = 16, weight = 'regular', color}) => ({
+}>(({fontSize = 16, weight = 'regular', color = '#000000'}) => ({
   fontSize,
   color,
   lineHeight: fontSize * 1.5,
