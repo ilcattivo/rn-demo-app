@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Dimensions, ScrollView} from 'react-native';
+import {useWindowDimensions, ScrollView} from 'react-native';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import styled from '@emotion/native';
@@ -33,6 +33,8 @@ export const ItemScreen = () => {
 
   const [quantity, setQuantity] = useState<number>(5);
 
+  const window = useWindowDimensions();
+
   useEffect(() => {
     if (params) {
       nav.setOptions({
@@ -51,7 +53,7 @@ export const ItemScreen = () => {
         <Container>
           <ItemImage
             source={{uri: getImage(900, params.id)}}
-            size={Dimensions.get('screen').width * 0.9}
+            size={window.width * 0.9}
           />
         </Container>
 
